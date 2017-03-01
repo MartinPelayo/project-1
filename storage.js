@@ -1,5 +1,5 @@
 'use strict';
-          //Sets storage for username and email
+          //local storage for username and email
 var form = document.querySelector('form');
 
 function submitHandler(){
@@ -14,11 +14,19 @@ function submitHandler(){
   JSON.stringify(emailData);
   localStorage.setItem('emailString', emailData);
 }
+// var test2 = JSON.parse(nameTest);
+// console.log(test2);
 
-            //Set storage data for score
+            //local storage data for score
 var getScoreString = localStorage.getItem('score');
 var scoreData = JSON.parse(getScoreString);
 
 
+if (form) {
+  form.addEventListener('submit', submitHandler);
+  var nameTest = localStorage.getItem('nameString');
+  console.log(nameTest);
+  var emailTest = localStorage.getItem('emailString');
+  console.log(emailTest);
+}
 
-form.addEventListener('submit', submitHandler);

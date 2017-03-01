@@ -113,7 +113,7 @@ function displayQuiz() {
 
 function grabQuizImages() {
   //Removes header image from array :D
-  for (var i = 4; i < images.length; i++) {
+  for (var i = 4; i < images.length - 1; i++) {
     albums.push(images[i]);
   }
 }
